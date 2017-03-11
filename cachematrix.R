@@ -1,5 +1,5 @@
 makeCacheMatrix <- function(x = matrix()) {
-        #Creates object/list with four methods (set, get, setMatrixCache, getMatrixCache)
+		#Creates object/list with four methods (set, get, setMatrixCache, getMatrixCache)
         m <- NULL
         set <- function(y) {
                 x <<- y
@@ -14,7 +14,7 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 cacheSolve <- function(x, ...) {
-        #Returns an inversed matrix either from cache or newly computed
+		#Returns an inversed matrix either from cache or newly computed
         m <- x$getMatrixCache()
         if(!is.null(m)) {
                 message("getting cached data")
@@ -31,3 +31,4 @@ cacheSolve <- function(x, ...) {
 MatrixToInverse <- matrix(c(1,2,3,4), nrow=2, ncol=2)
 CachedMatrix <- makeCacheMatrix(MatrixToInverse)
 print(cacheSolve(CachedMatrix))
+
